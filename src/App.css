@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ************ Universal *************** */
+
+.btn {
+  padding: 0.5em 1em;
+  background: #e5e5e5;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn:hover {
+  background: #6b6b6b;
+  color: #e5e5e5;
+  transition: background 0.4s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ************ Navbar *************** */
+
+.navbar h1 {
+  color: #6b6b6b;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.navbar .btn {
+  padding: 1em 2em;
+}
+
+/* ************ DataTable *************** */
+
+.container {
+  padding: 1em 8em;
+}
+
+table {
+  width: 100%;
+}
+
+table .btn {
+  margin: 0 0.5em;
+}
+
+thead {
+  background-color: #e5e5e5;
+}
+
+td,
+th {
+  padding: 0.3em;
+}
+
+.container table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.container table tbody tr:hover {
+  background-color: #e5e5e5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* ************ Form *************** */
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 4px;
+  background: #e5e5e5;
 }
 
-.App-link {
-  color: #61dafb;
+form input {
+  padding: 1em 2em;
+  margin: 0.5em 0;
+  border: none;
+  outline: none;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .btn {
+  width: 30%;
+  margin: 0 auto;
+}
+
+form .btn:hover {
+  background: #6b6b6bc4;
+}
+
+form .error {
+  color: red;
+  font-size: 0.8rem;
 }
